@@ -15,3 +15,6 @@ router.post("/api/burgers", function(req, res) {
         // What goes into the post response???
     });
 })
+
+
+module.exports = router;

@@ -1,15 +1,15 @@
-var connection = require("connection");
+var connection = require("../config/connection");
 
 // selectAll()
 // insertOne()
 // updateOne()
 
 var orm = { 
-    selectAll: function() {
+    selectAll: function(callback) {
         var query = "select * from burgers";
-        connection.query(query, function(err, result) {
+        connection.query(query, function(err, results) {
             if (err) throw err;
-            console.log(results);
+            callback(results);
         });
     },
 
